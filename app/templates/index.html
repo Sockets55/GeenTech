@@ -1,92 +1,74 @@
 {% extends 'layout.html' %}
-
 {% block content %}
-<div class="contenedor">
 
-    
-    <!-- secciones  -->
-    <section class="sec-1">
-        <div id="carouselExampleIndicators" class="carousel slide p-6 m-4" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
+<div class="product" data-name="Manzana">
+    <img src="{{ url_for('static', filename='img/manzana.jpeg') }}" alt="Manzana"><h2>Manzana</h2>
+    <p>$1.000</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+</div>
+<div class="product" data-name="Cebolla">
+    <img src="{{ url_for('static', filename='img/cebolla.jpeg') }}"  alt="Cebolla"><h2>Cebolla</h2>
+    <p>$1.000</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+</div>
+<div class="product" data-name="Tomate">
+    <img src="{{ url_for('static', filename='img/tomate.jpeg') }}"alt="tomate"><h2>Tomate</h2>
+    <p>$1.000</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+</div>
+<div class="product" data-name="Lechuga-crespa">
+    <img src="{{ url_for('static', filename='img/crespa.jpeg') }}"alt="Lechuga Crespa"><h2>Lechuga Crespa</h2>
+    <p>$1.000</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+</div>
+<div class="product" data-name="apio">
+    <img src="{{ url_for('static', filename='img/apio.jpeg') }}" alt="Apio">
+    <h2>Apio</h2>
+    <p>$1.000</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+</div>
+<div class="product" data-name="Brócoli">
+    <img src="{{ url_for('static', filename='img/brocoli.jpeg') }}" alt="Brócoli">
+    <h2>Brócoli</h2>
+    <p>$1.000</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+</div>  
 
-                    <img src="{{ url_for('static', filename='img/verduras.jpeg') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ url_for('static', filename='img/verduras1.jpeg') }}" class="d-block w-90" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ url_for('static', filename='img/verduras3.png') }}" class="d-block w-90" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-    </section>
-
- 
-
-  </div>
+<div class="product" data-name="Coliflor">
+    <img src="{{ url_for('static', filename='img/coliflor.jpeg') }}"alt="tomate"><h2>Coliflor</h2>
+    <p>$1.000</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+</div>
+<div class="product" data-name="Limón">
+    <img src="{{ url_for('static', filename='img/limon.jpeg') }}"alt="Lechuga Crespa"><h2>Limón</h2>
+    <p>$1.000</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+</div>
+<div class="product" data-name="Naranja">
+    <img src="{{ url_for('static', filename='img/naranja.jpeg') }}" alt="Naranja">
+    <h2>Naranja</h2>
+    <p>$1.000</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+</div>
+<div class="product" data-name="mango">
+    <img src="{{ url_for('static', filename='img/mango.jpeg') }}" alt="mango">
+    <h2>Mango</h2>
+    <p>$1.000</p>
+    <button class="add-to-cart">Agregar al carrito</button>
+</div>  
 
 
- 
-    <div class="servicios">
-        <h1>Nuestros servicios</h1>
-        <br>
 
-        <div class="row row-cols-1 row-cols-md-3 g-4 p-4">
-            <div class="col">
-                <div class="card">
-                    <img src="card01.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                            to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col">
-                <div class="card">
-                    <img src="card01.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                            to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col">
-                <div class="card">
-                    <img src="card01.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                            to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-            {% endblock %}
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

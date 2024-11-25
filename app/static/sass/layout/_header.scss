@@ -9,3 +9,22 @@
     top: 0;
          
 }
+.cart {
+    position: relative;
+}
+
+.cart span {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-size: 0.8rem;
+}
