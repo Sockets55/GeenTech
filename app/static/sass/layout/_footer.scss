@@ -1,0 +1,59 @@
+
+.container-icono{
+    i { 
+        font-size: 30px;
+        color: aliceblue;
+        margin: 1%;
+        transition: color 0.5s;
+        padding: 5px;
+        cursor: pointer;
+     
+        border-radius: 200%;
+        box-shadow: 3px 3px 3px rgba(211, 208, 208, 0.2);
+        background-color: rgba(0, 0, 0, 0.2);
+        border: none;
+        position: static;
+        
+    }
+    :hover{
+        color: blue;
+    }
+  
+     a{
+        color: aliceblue;
+      }
+      
+}
+
+/* Footer */
+
+    .footer {
+        /*posicion del formulario*/
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(-0%, 415%);
+
+        font-size: 20px;
+        color: aliceblue;
+        background-color: #0b9c43;
+        padding: 10px;
+        top: 0;
+             
+    }
+
+.footer .politicas {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+
+.footer .copyright {
+        margin-top: 10px;
+        text-align: center;
+        a {
+            color: aliceblue;
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
