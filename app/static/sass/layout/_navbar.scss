@@ -1,0 +1,32 @@
+.navbar {
+    .nav-link {
+      color: white;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  
+    .navbar-nav {
+      align-items: center;
+  
+      .bi {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+      }
+    }
+  
+    .cart {
+      position: relative;
+      
+      #cart-count {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: $secondary-color;
+        color: white;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 0.8rem;
+      }
+    }
+  }

@@ -1,5 +1,13 @@
+.footer {
+    background-color: $primary-color;
+    color: white;
+    padding: 2rem 0;
+     
+    .bi {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
 
-.container-icono{
     i { 
         font-size: 30px;
         color: aliceblue;
@@ -7,7 +15,6 @@
         transition: color 0.5s;
         padding: 5px;
         cursor: pointer;
-     
         border-radius: 200%;
         box-shadow: 3px 3px 3px rgba(211, 208, 208, 0.2);
         background-color: rgba(0, 0, 0, 0.2);
@@ -16,44 +23,15 @@
         
     }
     :hover{
-        color: blue;
+        color: yellow;
     }
-  
-     a{
-        color: aliceblue;
+   
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+                text-decoration: underline;
       }
-      
-}
-
-/* Footer */
-
-    .footer {
-        /*posicion del formulario*/
-    position: relative;
-    top: 0%;
-    left: 0%;
-    transform: translate(-0%, 415%);
-
-        font-size: 20px;
-        color: aliceblue;
-        background-color: #0b9c43;
-        padding: 10px;
-        top: 0;
-             
     }
+  }
 
-.footer .politicas {
-        margin-top: 10px;
-        text-align: center;
-    }
-
-
-.footer .copyright {
-        margin-top: 10px;
-        text-align: center;
-        a {
-            color: aliceblue;
-            margin-top: 10px;
-            text-align: center;
-        }
-    }

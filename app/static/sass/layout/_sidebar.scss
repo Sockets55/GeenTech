@@ -1,0 +1,40 @@
+/* Container */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar */
+.sidebar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.sidebar {
+    background-color: green;
+    width: 250px;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
+    #search-bar {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
