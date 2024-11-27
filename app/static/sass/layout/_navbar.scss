@@ -1,32 +1,77 @@
 .navbar {
-    .nav-link {
-      color: white;
-      &:hover {
-        color: $secondary-color;
+  .nav-link {
+    color: white;
+
+    &:hover {
+      color: $secondary-color;
+      h1{
+        display: flex;
+        flex-wrap: wrap;
+
       }
+      .img{
+        border-radius: 15px;
     }
-  
-    .navbar-nav {
-      align-items: center;
-  
-      .bi {
-        font-size: 1.2rem;
-        margin-right: 0.5rem;
-      }
-    }
-  
-    .cart {
-      position: relative;
-      
-      #cart-count {
-        position: absolute;
-        top: -10px;
-        right: -10px;
-        background-color: $secondary-color;
-        color: white;
-        border-radius: 50%;
-        padding: 2px 6px;
-        font-size: 0.8rem;
-      }
+    
     }
   }
+
+  .navbar-nav {
+    align-items: center;
+
+    .bi {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .cart {
+    position: relative;
+
+    .icono-cart i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 60px;
+      left: 80px;
+      width: 250px;
+      color: green;
+      margin-right: 2px;
+      cursor: pointer;
+    }
+
+    #cart-count {
+      position: relative;
+      top: -60px;
+      right: -150px;
+      background-color: red;
+      color: white;
+      border-radius: 150%;
+      padding: 8px 14px;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+#menu-principal{
+  display: flex;
+  padding: 10px;
+  //background-color: #333;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px rgba(47, 244, 8, 0.566);
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 80%;
+  font-size: 14px;
+  color: white;
+  width: -100%;
+  a{
+    color: green;
+    margin: 10px;
+    text-decoration: none;
+  }
+  i:hover{
+    color: yellow;
+  }
+  
+}

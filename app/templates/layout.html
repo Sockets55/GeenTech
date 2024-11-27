@@ -24,183 +24,189 @@
     <nav class="navbar navbar-expand-lg">
 
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"> <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="logo"
-          width="100"></a>
-          <h1 class="float-end">Tienda de Frutas y Verduras</h1>
+        <a class="navbar-brand" href="#"><img  src="{{ url_for('static', filename='img/logo.jpeg') }}" class="img" alt="logo"
+            width="100"><h1 class="float-end">Tienda de Frutas y Verduras</h1></a>       
       </div>
-        
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
-      aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
+        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
 
-    <div class="collapse navbar-collapse" id="navbarColor03">
-      
-      <ul class="navbar-nav me-auto">
+      <div class="collapse navbar-collapse" id="menu-principal">
+        
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <div class="navbar-nav align-items-center">
+            <a href="#" style="text-decoration: none;color: inherit">
+              <figure class="mr-2 my-0">
+                <i class="bi bi-house"></i>
+              </figure>
+            </a>
+            <h4 class="text-white mr-5 d-none d-md-block my-0">
+              <a class="nav-link active text-uppercase txt-regular" class="bi bi-house-door" style="text-decoration: none;color: inherit" href="#">Inicio
+              <span class="visually-hidden">(current)</span></a>
+            </h4>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link active"  class="bi bi-house-door" href="#">Inicio
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contáctenos</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-            aria-expanded="false">Sobre nosotros </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#"></a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Trabaja con nosotros</a>
+          <li class="nav-item">
+            <div class="navbar-nav align-items-center">
+            <a href="#" style="text-decoration: none;color: inherit">
+              <figure class="mr-2 my-0">
+                <i class="bi bi-person-vcard"></i>
+              </figure>
+            </a>
+             <h4 class="text-white mr-5 d-none d-md-block my-0">
+            <a href="#" style="text-decoration: none;color: inherit"><span
+                class="text-uppercase txt-regular">Contáctenos</a>
+          </h4>
           </div>
-        </li>
+          </li>
 
-        <div class="navbar-nav">
-                  
-            <i class="bi bi-whatsapp"></i>
-            <a class="nav-link" href="#">Ventas: +57 000 00000</a>
-                   
-            <i class="bi bi-person-circle"></i>
-            <a class="nav-link" href="#">Ingresar</a>
-                
-            <a class="nav-link" href="#"><i class="bi bi-person-circle" ></i>Regístrate</a>
-          
+          <li class="nav-item dropdown">
+            <div class="navbar-nav align-items-center">
+              <a href="#" style="text-decoration: none;color: inherit">
+                <figure class="mr-2 my-0">
+                  <i class="bi bi-people"></i>
+                </figure>
+              </a>
+              <h4 class="text-white mr-5 d-none d-md-block my-0">
+                <a class="nav-link dropdown-toggle text-uppercase txt-regular" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false" style="text-decoration: none;color: inherit">Sobre nosotros </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#"></a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Trabaja con nosotros</a>
+                </div>
+                </h4>
+              </div>                       
+          </li>
+
+          </ul>
+
+        <div class="navbar-nav align-items-center ">
+          <a href="#" style="text-decoration: none;color: inherit">
+            <figure class="mr-2 my-0">
+              <i class="bi bi-whatsapp"></i>
+            </figure>
+          </a>
+          <h4 class="text-white mr-5 d-none d-md-block my-0">
+            <a href="#" style="text-decoration: none;color: inherit"><span
+                class="text-uppercase txt-regular">Ventas:</span> +57 000 0000000</a> - 0000000
+          </h4>
         </div>
+   
+        <div class="navbar-nav align-items-center cursor-pointer">
+          <figure class="mr-md-2 my-0" @click="openModal('modal-login')"><i class="bi bi-person-circle"></i></figure>
+          <h4 class="text-white mr-2 text-uppercase d-none d-md-block my-0"><span
+              @click="openModal('modal-login')">Ingresa</span> / <span
+              @click="openModal('modal-registro')">Registrate</span></h4>
+        </div>
+      </div>
+    </nav>
 
-     </ul>
-    </div>
-  </nav>
-    
     <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
       <div class="container-fluid">
-        
+
         <form class="d-flex">
           <input class="form-control me-sm-2" type="search" id="search-bar" placeholder="Buscar Productos...">
           <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
         </form>
 
-        <ul class="navbar-nav me-auto">
-
-  
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-              aria-expanded="false">Categorias </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">frutas</a>
-
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Trabaja con nosotros</a>
-            </div>
-          </li>
-  
-
-          <div class="cart">
-            <span><i class="bi bi-cart4"></i></span>
-            <span id="cart-count">0</span>
-        </div>
-          
-        
+      </div>
+      <div class="cart">
+        <span class="icono-cart"><i class="bi bi-cart4"></i></span>
+        <span id="cart-count">0</span>
       </div>
     </nav>
-      </header>
-     
-    <main>
-      
-      <!-- Productos -->
-      {% block content %}{% endblock %}
+  </header>
 
-    </main>
+  <main>
+
+    <!-- Productos -->
+    {% block content %}{% endblock %}
+
+  </main>
 
 
-    <!-- pie de pagina -->
-    <footer class="footer my-5 border-top " >
-      
-      <section class="pt-5 pb-4 container-fluid px-lg-5 fondo-pie">
-         
-        <div class="row d-flex">
-          <div class="col-lg-4 col-md-6 pr-xl-5">
-            
-  
-            <div class="d-flex justify-content-center justify-content-md-start">
-              <i class="bi bi-telephone-fill"></i> 
-              <p class="text-white"> 0000000 - +57 000 0000000 </p>
-            </div>
-  
-            <div class="d-flex justify-content-center justify-content-md-start">
-              <i class="bi bi-geo-alt-fill"></i>
-              <p class="text-white">GreenTech Cartagena, Colombia</p>
-            </div>
+  <!-- pie de pagina -->
+  <footer class="footer my-5 border-top ">
+
+    <section class="pt-5 pb-4 container-fluid px-lg-5 fondo-pie">
+
+      <div class="row d-flex">
+        <div class="col-lg-4 col-md-6 pr-xl-5">
+
+
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <i class="bi bi-telephone-fill"></i>
+            <p class="text-white">+57 000 0000000 - 0000000 </p>
           </div>
-  
-          <div class="col-lg-2 col-md-6  pl-xl-4">
-             <p class="text-white text-uppercase text-center text-md-left"><a href="./conocenos"
-                style="text-decoration: none;color: inherit" class="menu-pie">Contáctenos</a></p>
 
-            <p class="text-white text-uppercase text-center text-md-left d-none menu-pie"><a href="./productos"
-                style="text-decoration: none;color: inherit" class="menu-pie">Categorías</a></p>
-
-            <p class="text-white text-uppercase text-center text-md-left cursor-pointer"
-              @click="openModal('modal-registro')"><span class="menu-pie">Ingresar</span></p>
-
-            </div>
-  <!-- Redes sociales -->
-          <div class="col-lg-2 col-md-6 pl-xl-4">
-            <p class="text-white text-uppercase txt-regular text-center text-md-left">S&iacute;GUENOS EN...</p>
-  
-            <div class="d-flex justify-content-center justify-content-md-start">
-              <i class="bi bi-facebook"></i>
-              <p class="text-white">facebook</p>
-            </div>
-  
-            <div class="d-flex justify-content-center justify-content-md-start">
-              <i class="bi bi-instagram"></i>
-              <p class="text-white">instagra</p>
-            </div>
-  
-            <div class="d-flex justify-content-center justify-content-md-start">
-              <i class="bi bi-whatsapp"></i>
-              <p class="text-white">whatsapp</p>
-            </div>
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <i class="bi bi-geo-alt-fill"></i>
+            <p class="text-white">GreenTech Cartagena, Colombia</p>
           </div>
-   <!-- Terminos y condiciones -->
-          <div class="col-lg-4 col-md-6 align-self-end pl-xl-5">
-            <p><a class="text-white text-center text-md-left" href="#"
-                style="text-decoration: underline">Términos y Condiciones</a></p>
-  
-            <p><a class="text-white text-center text-md-left" href="#"
-                style="text-decoration: underline" target="_blank">Pol&iacute;tica de tratamiento de datos</a></p>
-            </div>
         </div>
-      </section>
-  
-      <section class="d-flex justify-content-end container-fluid pt-2">
-        <h4 class="text-white mr-2 pt-1"><a style="color: inherit;text-decoration: none;" target="_blank">Copyright
-            &copy;. Todos los derechos reservados</a></h4>
 
-      </section>
+        <div class="col-lg-2 col-md-6  pl-xl-4">
+          <p class="text-white text-uppercase text-center text-md-left"><a href="./contacto.html"
+              style="text-decoration: none;color: inherit" class="menu-pie">Contáctenos</a></p>
 
-      
+          <p class="text-white text-uppercase text-center text-md-left d-none menu-pie"><a href="./productos"
+              style="text-decoration: none;color: inherit" class="menu-pie">Categorías</a></p>
 
-    </footer>
+          <p class="text-white text-uppercase text-center text-md-left cursor-pointer"
+            @click="openModal('modal-registro')"><span class="menu-pie">Ingresar</span></p>
 
-    <!-- script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-      </script>
-        <script  href="{{ url_for('static', filename='js/layout.js') }}"></script>
-     <script  href="{{ url_for('static', filename='js/modal.js') }}"></script>
-     <script  src="{{ url_for('static', filename='js/script.js') }}"></script>
+        </div>
+        <!-- Redes sociales -->
+        <div class="col-lg-2 col-md-6 pl-xl-4">
+          <p class="text-white text-uppercase txt-regular text-center text-md-left">S&iacute;GUENOS EN...</p>
+
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <i class="bi bi-facebook"></i>
+            <p class="text-white">facebook</p>
+          </div>
+
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <i class="bi bi-instagram"></i>
+            <p class="text-white">instagra</p>
+          </div>
+
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <i class="bi bi-whatsapp"></i>
+            <p class="text-white">whatsapp</p>
+          </div>
+        </div>
+        <!-- Terminos y condiciones -->
+        <div class="col-lg-4 col-md-6 align-self-end pl-xl-5">
+          <p><a class="text-white text-center text-md-left" href="#" style="text-decoration: underline">Términos y
+              Condiciones</a></p>
+
+          <p><a class="text-white text-center text-md-left" href="#" style="text-decoration: underline"
+              target="_blank">Pol&iacute;tica de tratamiento de datos</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="d-flex justify-content-end container-fluid pt-2">
+      <h4 class="text-white mr-2 pt-1"><a style="color: inherit;text-decoration: none;" target="_blank">Copyright
+          &copy;. Todos los derechos reservados</a></h4>
+
+    </section>
+
+
+
+  </footer>
+
+  <!-- script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+  <script href="{{ url_for('static', filename='js/layout.js') }}"></script>
+  <script href="{{ url_for('static', filename='js/modal.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>

@@ -1,12 +1,16 @@
 .header {
     background: green;    
-
-
 }
 
 header {
     background-color: #4CAF50;
     color: white;
+    img{
+      max-width: 100px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
     h1{
         font-size: 50px;
         padding: 20px;

@@ -2,6 +2,7 @@
 .container {
     display: flex;
     flex: 1;
+    position: relative;
 }
 
 /* Sidebar */
@@ -13,6 +14,7 @@
     border-radius: 5px;
 }
 .sidebar {
+  
     background-color: green;
     width: 250px;
     padding: 1rem;
