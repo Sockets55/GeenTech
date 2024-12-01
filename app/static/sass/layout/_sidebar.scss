@@ -1,42 +1,140 @@
-/* Container */
+$sidebar-width: 250px;
+$sidebar-bg: #2E7D32;
+$transition-speed: 0.3s;
+$border-radius: 8px;
+$shadow-color: rgba(0, 0, 0, 0.15);
+$accent-color: rgba(47, 244, 8, 0.566);
+
 .container {
-    display: flex;
-    flex: 1;
-    position: relative;
+  display: flex;
+  flex: 1;
 }
 
-/* Sidebar */
-.sidebar input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 .sidebar {
-  
-    background-color: green;
-    width: 250px;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  
-    #search-bar {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-    }
-  
-    ul {
-      list-style-type: none;
-      padding: 0;
-  
-      li {
-        padding: 0.5rem 0;
-        border-bottom: 1px solid #eee;
-        &:last-child {
-          border-bottom: none;
-        }
+  width: $sidebar-width;
+  background-color: $sidebar-bg;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+  }
+
+  // Apariencia básica
+  background-color: green;
+  width: 250px;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  // Barra de búsqueda
+  #search-bar {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  // Lista de elementos
+  ul {
+    color: white;
+    // ... código existente ...
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      padding: 0.8rem;
+      border-radius: $border-radius;
+      transition: background-color $transition-speed ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: rgba(255, 255, 255, 0.2);
       }
     }
   }
+}
+
+.sidebar input {
+  // Dimensiones y espaciado
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  // Bordes y forma
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 5px;
+
+  // Estados interactivos
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+
+  // Estilo del placeholder
+  &::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  // Efectos visuales
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+
+  // Efecto hover
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+// ... código existente ...
+transition: transform $transition-speed ease,
+box-shadow $transition-speed ease,
+border-color $transition-speed ease;
+
+&:focus,
+&:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px $shadow-color;
+}
+}
+
+.sidebar .ctg {
+  // Disposición y tamaño
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  padding: 20px;
+
+  // Apariencia
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px rgba(47, 244, 8, 0.566);
+  transition: background-color 1.3s ease;
+
+  // ... código existente ...
+  background: linear-gradient(145deg, $sidebar-bg, darken($sidebar-bg, 10%));
+  box-shadow:
+    0 4px 15px $shadow-color,
+    0 0 0 2px $accent-color;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow:
+      0 6px 20px $shadow-color,
+      0 0 0 3px $accent-color;
+  }
+}

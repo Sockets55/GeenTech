@@ -1,37 +1,197 @@
-.footer {
-    background-color: $primary-color;
-    color: white;
-    padding: 2rem 0;
-     
-    .bi {
-      font-size: 1.2rem;
-      margin-right: 0.5rem;
-    }
+// Variables
+$footer-colors: (
+  'bg': #4CAF50,
+  'text': #ffffff,
+  'accent': rgba(47, 244, 8, 0.566),
+  'hover': #FFD700,
+  'shadow': rgba(0, 0, 0, 0.15)
+);
 
-    i { 
-        font-size: 30px;
-        color: aliceblue;
-        margin: 1%;
-        transition: color 0.5s;
-        padding: 5px;
-        cursor: pointer;
-        border-radius: 200%;
-        box-shadow: 3px 3px 3px rgba(47, 244, 8, 0.566);
-        background-color: rgba(0, 0, 0, 0.2);
-        border: none;
-        position: static;
-        
+$spacing: (
+  'xs': 0.5rem,
+  'sm': 1rem,
+  'md': 2rem,
+  'lg': 3rem
+);
+
+// Mixins
+@mixin hover-effect {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-3px);
+    color: map-get($footer-colors, 'hover');
+  }
+}
+
+@mixin glass-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: map-get($spacing, 'sm');
+}
+
+// Estilos del Footer
+.footer {
+  background-color: map-get($footer-colors, 'bg');
+  color: map-get($footer-colors, 'text');
+  padding: map-get($spacing, 'md') 0;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    box-shadow: 0 4px 15px $header-shadow;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all $transition-speed ease;
+    // Animacion //
+    &:hover {
+      transform: rotate(5deg) scale(1.40);
+      box-shadow: 0 6px 20px $header-shadow;
     }
-    :hover{
-        color: yellow;
+    
+
+
+  // Contenedor principal
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 map-get($spacing, 'md');
+    
+    @media (max-width: 768px) {
+      padding: 0 map-get($spacing, 'sm');
     }
-   
-    a {
-      color: white;
-      text-decoration: none;
+  }
+
+  // Iconos sociales
+  &__social-icons {
+    display: flex;
+    gap: map-get($spacing, 'sm');
+    
+    i {
+      font-size: 1.875rem;
+      padding: map-get($spacing, 'xs');
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px map-get($footer-colors, 'shadow');
+      cursor: pointer;
+      @include hover-effect;
+      
       &:hover {
-                text-decoration: underline;
+        box-shadow: 0 6px 15px map-get($footer-colors, 'accent');
       }
     }
   }
 
+  // Enlaces
+  &__links {
+    a {
+      color: map-get($footer-colors, 'text');
+      text-decoration: none;
+      position: relative;
+      padding: map-get($spacing, 'xs') 0;
+      @include hover-effect;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: map-get($footer-colors, 'hover');
+        transition: width 0.3s ease;
+      }
+      
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  // Información de contacto
+  &__contact {
+    @include glass-card;
+    
+    .bi {
+      font-size: 1.2rem;
+      margin-right: map-get($spacing, 'xs');
+      color: map-get($footer-colors, 'accent');
+    }
+    
+    p {
+      margin: map-get($spacing, 'xs') 0;
+    }
+  }
+
+  // Copyright
+  &__copyright {
+    text-align: center;
+    padding-top: map-get($spacing, 'md');
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: map-get($spacing, 'md');
+    
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  }
+
+  // Grid responsivo
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: map-get($spacing, 'md');
+    
+    @media (max-width: 768px) {
+      gap: map-get($spacing, 'sm');
+    }
+  }
+
+  // Animaciones
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__grid > * {
+    animation: fadeIn 0.5s ease-out forwards;
+    
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * 0.1s;
+      }
+    }
+  }
+
+  // Mejoras de accesibilidad
+  &__links a,
+  &__social-icons i {
+    &:focus {
+      outline: 2px solid map-get($footer-colors, 'accent');
+      outline-offset: 4px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+}

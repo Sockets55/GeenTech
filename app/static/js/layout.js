@@ -1,14 +1,17 @@
-    // Añade un evento de carga del DOM para inicializar el carousel
-    document.addEventListener('DOMContentLoaded', function () {
-        var myCarousel = document.getElementById('carouselExampleIndicators');
-        var carousel = new bootstrap.Carousel(myCarousel, {
-            interval: 3000, // Cambia de slide cada 3 segundos
-            wrap: true // Vuelve al primer slide después del último
+       const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '50px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateX(0)';
+          }
         });
-
-        // Inicia el movimiento automático
-       
-        carousel.cycle(carouselExampleIndicators);
-        
-    });
-
+      }, observerOptions);
+      
+      document.querySelectorAll('.product').forEach(product => {
+        observer.observe(product);
+      });
