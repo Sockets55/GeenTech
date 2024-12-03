@@ -97,10 +97,9 @@
         </div>
    
         <div class="navbar-nav align-items-center cursor-pointer">
-          <figure class="mr-md-2 my-0" @click="openModal('modal-login')"><i class="bi bi-person-circle"></i></figure>
-          <h4 class="text-white mr-2 text-uppercase d-none d-md-block my-0"><span
-              @click="openModal('modal-login')">Ingresa</span> / <span
-              @click="openModal('modal-registro')">Registrate</span></h4>
+          <figure class="mr-md-2 my-0" @click="openModal('login')"><i class="bi bi-person-circle"></i></figure>
+          <h4 class="text-white mr-2 text-uppercase d-none d-md-block my-0"><span></span><a class="openModal" href="/login">Ingresar</a></span> / <span>
+          <a class="openModal" href="/registro">Registrate</a></span></h4>
         </div>
       </div>
     </nav>
@@ -153,15 +152,14 @@
         </div>
 
         <div class="col-lg-2 col-md-6  pl-xl-4">
-          <p class="text-white text-uppercase text-center text-md-left"><a href="./contacto.html"
+          <p class="text-white text-uppercase text-center text-md-left"><a href="./contacto"
               style="text-decoration: none;color: inherit" class="menu-pie">Contáctenos</a></p>
 
           <p class="text-white text-uppercase text-center text-md-left d-none menu-pie"><a href="./productos"
               style="text-decoration: none;color: inherit" class="menu-pie">Categorías</a></p>
 
-          <p class="text-white text-uppercase text-center text-md-left cursor-pointer"
-            @click="openModal('modal-registro')"><span class="menu-pie">Ingresar</span></p>
-
+          <p class="text-white text-uppercase text-center text-md-left cursor-pointer">
+            <a href="/login" style="text-decoration: none;color: inherit" class="menu-pie">Ingresar</a></p>
         </div>
         <!-- Redes sociales -->
         <div class="col-lg-2 col-md-6 pl-xl-4">

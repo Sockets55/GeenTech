@@ -1,11 +1,8 @@
-const btnAbrirModal =
-  document.querySelector("#btn-abrir-modal");
-  const btnCerrarModal = 
-  document.querySelector("#btn-cerrar-modal");
-  document.querySelector('#modal');
-
-  btnAbrirModal.addEventListener("click", () => {
-    modal.showModal();
+const openModal = document.querySelector(".openModal");
+const modal = document.querySelectorAll(".modal");
+    openModal.addEventListener("click", () => {
+      e.preventDefault();
+    modal.classList.add();
   });
 
   btnCerrarModal.addEventListener('click', () => {

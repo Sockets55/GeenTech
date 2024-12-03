@@ -133,6 +133,7 @@ border-color $transition-speed ease;
 
   // ... código existente ...
   background: linear-gradient(145deg, $sidebar-bg, darken($sidebar-bg, 10%));
+  
   box-shadow:
     0 4px 15px $shadow-color,
     0 0 0 2px $accent-color;
