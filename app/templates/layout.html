@@ -48,7 +48,7 @@
               <span class="visually-hidden">(current)</span></a>
             </h4>
           </li>
-
+         <!-- Contactenos -->
           <li class="nav-item">
             <div class="navbar-nav align-items-center">
             <a href="/contacto" style="text-decoration: none;color: inherit">
@@ -95,21 +95,44 @@
                 class="text-uppercase txt-regular">Ventas:</span> +57 000 0000000</a> - 0000000
           </h4>
         </div>
-   
-        <div class="navbar-nav align-items-center cursor-pointer">
-          <figure class="mr-md-2 my-0" @click="openModal('login')"><i class="bi bi-person-circle"></i></figure>
-          <h4 class="text-white mr-2 text-uppercase d-none d-md-block my-0"><span></span><a class="openModal" href="/login">Ingresar</a></span> / <span>
-          <a class="openModal" href="/registro">Registrate</a></span></h4>
+
+<!-- abrir formulario de login -->
+        <div class="navbar-nav align-items-center ">
+          <a href="login" style="text-decoration: none;color: inherit">
+            <figure class="mr-2 my-0">
+              <i class="bi bi-person-circle"></i>  
+            </figure>
+          </a>
+          <h4 class="text-white mr-5 d-none d-md-block my-0">
+            <a class="openModal" href="/login" style="text-decoration: none;color: inherit"><span
+                class="text-uppercase txt-regular">Ingresar</a> 
+              </h4>
         </div>
+
+<!-- abrir formulario de registro -->
+                
+          <div class="navbar-nav align-items-center">
+          <a class="openModa" href="/registro" style="text-decoration: none;color: inherit">
+            <figure class="mr-2 my-0">
+              <i class="bi bi-person-vcard"></i>
+            </figure>
+          </a>
+           <h4 class="text-white mr-5 d-none d-md-block my-0">
+          <a href="/registro" style="text-decoration: none;color: inherit"><span
+              class="text-uppercase txt-regular">Registrate</a>
+        </h4>
+        </div>
+              
       </div>
     </nav>
 
+<!-- Buscador de productos -->
     <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
       <div class="container-fluid">
 
         <form class="d-flex">
           <input class="form-control me-sm-2" type="search" id="search-bar" placeholder="Buscar Productos...">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
+          <button class="btn btn-secondary my-2 my-sm-0 color-primary" type="submit" id="search-bar"><i class="bi bi-search"></i></button>
         </form>
 
       </div>
@@ -118,6 +141,7 @@
         <span id="cart-count">0</span>
       </div>
     </nav>
+
   </header>
 
   <main>

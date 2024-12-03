@@ -761,6 +761,22 @@ main {
   border-bottom: 2px solid silver;
 }
 
+.modal-content2 {
+  /*posicion del formulario*/
+  display: flex;
+  font-size: large;
+  margin: auto;
+  width: 70%;
+  max-width: 100%;
+  max-height: 600px;
+  padding: 20px;
+  border-radius: 25px;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  grid-auto-columns: 100%;
+}
+
 .contenedor {
   display: flex;
 }

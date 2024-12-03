@@ -1,53 +1,50 @@
 {% extends 'layout.html' %}
-
 {% block content %}
 
-<section>
-                <h1>¿Necesitas ayuda en tu reparación?</h1>
-                <p>Contáctanos y te ayudaremos en el proceso de reparación.</p>
+<section class="modal">
+  
+        <div class="modal-content2">
+            <h1>Contáctenos</h1>
 
-                <!-- <div id= "formulario" class="row g-3"> -->
-                    <h1>Contactar</h1>
-                    <!-- para enviar informacion-->
-                    <form method="post">
+            <p id="parrafoCabecera">Complete el siguiente formulario para ponerse en contacto con nuestro equipo.</p>
 
-                        <!--creacion de caja usurio-->
-                        <div class="username">
-                            <input type="text" id="Nombre">
-                            <label>Nombre *</label>
-                        </div>
-                       
-                        
-                        <div class="ciudad">
-                            <input type="text" required>
-                            <label>Ciudad *</label>
-                        </div>
-
-                        <div class="telefono">
-                            <input type="text" required>
-                            <label>Teléfono *</label>
-                        </div>
-
-                        <div class="email">
-                            <input type="text" required>
-                            <label>Email *</label>
-                        </div>
-
-                        <div class="mensaje col-12">
-                            <input type="text" required>
-                            <label>Mensaje *</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">Default checkbox
-                            </label>
-                        </div>
-                        <!--estrutura para recupera y crear usuario-->
-                        <div class="recordar"></div>
-                        <input type="submit" value="Enviar Solicitud">
+            <form class="row g-3" id="formulario"> <!--</form> action="/contacto" method="post">-->
+                <div class="col-12">
+                    <label for="inputName" class="form-label">Nombre completo*</label>
+                    <input type="text" class="form-control" id="inputName"placeholder="Nombre completo">
                 </div>
-
+                <div class="col-12">
+                    <label for="inputEmail" class="form-label">Correo electrónico*</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="@">
                 </div>
-     </section>
-    {% endblock %}    
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Ciudad*</label>
+                    <input type="text" class="form-control" id="inputCity"placeholder="Ciudad">
+                </div>
+                         
+                <div class="col-6">
+                    <label for="inputPhone" class="form-label">Teléfono*</label>
+                    <input type="text" class="form-control" id="inputPhone" placeholder="+57 000 00 00000">
+                </div>
+                 
+                <div class="col-12">
+                    <label for="inputMessage" class="form-label">Mensaje*</label>
+                    <textarea type="text" class="form-control" id="inputMessage"></textarea>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Autorización para tratamiento de datos personales.
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="button" id="enviar" class="btn btn-success mb-4">Enviar</button>
+                </div>
+            </form>
+
+        </div>
+            <span id="mensaje"></span>
+        </section>
+            {% endblock %}
