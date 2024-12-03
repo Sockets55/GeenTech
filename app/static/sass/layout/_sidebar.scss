@@ -35,35 +35,41 @@ $accent-color: rgba(47, 244, 8, 0.566);
     margin-bottom: 1rem;
   }
 
-  // Lista de elementos
-  ul {
+  // Lista de elementos principal
+  .category-list {
     color: white;
-    // ... código existente ...
     list-style-type: none;
     padding: 0;
 
-    li {
+    .category-item {
       padding: 0.5rem 0;
       border-bottom: 1px solid #eee;
+      font-size: 20px; // tamaño de la letra 
 
-      &:last-child {
+     &:last-child {
         border-bottom: none;
       }
-
       padding: 0.8rem;
       border-radius: $border-radius;
       transition: background-color $transition-speed ease;
 
       &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: $accent-color;
         cursor: pointer;
       }
 
       &:active {
         background-color: rgba(255, 255, 255, 0.2);
+        
       }
     }
   }
+}
+// lista de elementos
+.category-item .subcategory-list{
+
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
 }
 
 .sidebar input {
@@ -119,7 +125,7 @@ border-color $transition-speed ease;
   padding: 20px;
 
   // Apariencia
-  color: white;
+  color: black;
   margin-bottom: 15px;
   border-radius: 8px;
   box-shadow: 3px 3px 3px rgba(47, 244, 8, 0.566);
@@ -137,4 +143,7 @@ border-color $transition-speed ease;
       0 6px 20px $shadow-color,
       0 0 0 3px $accent-color;
   }
+}
+.carousel-inner .carousel-item img{
+  border-radius: 15px;
 }

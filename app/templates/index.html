@@ -13,11 +13,20 @@
                     <h1 class="text-white">Categorías</h>
                     </div>
 
-                <ul>
-                    <li>Frutas</li>
-                    <li>Verduras</li>
-                    <li>Ofertas</li>
-                    <li>Orgánicos</li>
+                <ul class="category-list">
+                    <li class="category-item">Frutas
+                        <lu class="subcategory-list">
+                            <li>Manzana</li>
+                            <li>Pera</li>
+                            <li>Naranja</li>
+                            <li>Uva</li>
+                            <li>Cereza</li>
+                            <li>Papaya</li>
+                        </lu>
+                    </li>
+                    <li class="category-item">Verduras</li>
+                    <li class="category-item">Orgánicos</li>
+                    <li class="category-item">Ofertas<li>
 
 
                 </ul>
@@ -78,8 +87,8 @@
         <div class="product" data-name="Cebolla">
             <img src="{{ url_for('static', filename='img/cebolla.jpeg') }}" alt="Cebolla">
             <h2>Cebolla</h2>
-            <p>$1.000</p>
-            <button class="add-to-cart">Agregar al carrito</button>
+            <p><i class="bi bi-dash-circle-dotted"></i><input type="number" name="age" id="age" min="0000000" max="1000000000" step="2" placeholder="Cantidad en gr" /><i class="bi bi-plus-circle-dotted"></i></p>
+            <button class="add-to-cart"><i class="bi bi-cart4"></i></button>
         </div>
         <div class="product" data-name="Tomate">
             <img src="{{ url_for('static', filename='img/tomate.jpeg') }}" alt="tomate">
